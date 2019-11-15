@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Greeting } from './Greeting';
 import { PublicTransport } from './PublicTransport';
 
 function App() {
   return (
-    <Greeting />
-    <PublicTransport />
+    <Fragment>
+      <Greeting />
+      <PublicTransport />
+    </Fragment>
   );
 }
 
