@@ -32,7 +32,7 @@ export function MessagesSummary() {
 
   return (
     <StyledCard className="card social summary">
-      <h3>Messages</h3>
+      <h4>Messages</h4>
       <p><FontAwesomeIcon icon={faExclamation} /> {important} important messages</p>
       <p><FontAwesomeIcon icon={faEnvelope} /> {other} other messags</p>
     </StyledCard>
