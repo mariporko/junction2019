@@ -4,10 +4,17 @@ import { PublicTransport } from './PublicTransport';
 
 function App() {
   return (
-    <Fragment>
-      <Greeting />
-      <PublicTransport />
-    </Fragment>
+    <div className="flex-container">
+      <header className="header">
+        <Greeting />
+      </header>
+      <div className="flex-item">
+        <PublicTransport />
+      </div>
+      <div className="flex-item">
+        
+      </div>
+    </div>
   );
 }
 

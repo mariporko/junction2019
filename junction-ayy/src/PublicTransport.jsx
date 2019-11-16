@@ -1,10 +1,11 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     graphql,
     GraphQLSchema,
     GraphQLObjectType,
     GraphQLString,
   } from 'graphql';
+import Card from '@material-ui/core/Card';
 
 export function PublicTransport() {
 
@@ -59,9 +60,9 @@ export function PublicTransport() {
     }
 
     return (
-        <Fragment>
+        <Card className="card">
             <h1>Public transport info</h1>
             <p>Bus {next.trip.route.shortName} to {next.headsign} will depart in {nextWillDepart()} minutes.</p>
-        </Fragment>
+        </Card>
     );
 }
