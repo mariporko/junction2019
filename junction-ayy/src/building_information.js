@@ -28,13 +28,18 @@ export const RESIDENTS = [
 
 export const MESSAGES = [
     {
-      message: "Hey all! I'm planning on having friends over on Friday 23.11., sorry if we make too much noise! We'll leave around 23.",
+      text: "Hey all! I'm planning on having friends over on Friday 23.11., sorry if we make too much noise! We'll leave around 23.",
       from: "Teemu from A4",
       important: false,
     },
     {
-        message: "There will be a break in the availability of hot water in 19.11. between 8–12. Sorry for the inconvenience.",
+        text: "There will be a break in the availability of hot water in 19.11. between 8–12. Sorry for the inconvenience.",
         from: "AYY",
         important: true,
+    },
+    {
+        text: "Hi! I think I dropped my a glove in the hall last week, if someone happened to pick it up could you please drop it to my mailbox?",
+        from: "Assi, A5",
+        important: false,
     },
 ];

@@ -12,14 +12,14 @@ import { Sustainability, SustainabilitySummary } from "./squares/Sustainability"
 import { AyyInfo } from "./squares/AyyInfo";
 import { Time } from "./squares/Time";
 import { AyyFeed } from "./squares/AyyFeed";
-import { Social } from "./squares/Social";
+import { Messages, MessagesSummary } from "./squares/Messages";
 
 function App() {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(2);
 
   const showSustainability = current === 0;
   const showAyyFeed = current === 1;
-  const showSocial = current === 2;
+  const showMessages = current === 2;
 
   return (
     <Fragment>
@@ -44,14 +44,14 @@ function App() {
             >
               <SustainabilitySummary />
               <AyyFeed />
-              <Social />
+              <MessagesSummary />
             </Carousel>
           </div>
           <div className="flex-item">
             <div className="content-card">
               {showSustainability && <Sustainability />}
               {showAyyFeed && <AyyFeed />}
-              {showSocial && <Social />}
+              {showMessages && <Messages />}
             </div>
           </div>
         </div>
