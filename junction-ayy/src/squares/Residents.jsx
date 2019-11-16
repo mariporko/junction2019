@@ -3,9 +3,15 @@ import React, { Fragment } from "react";
 import { RESIDENTS } from "../building_information";
 import { StyledCard } from "../StyledCard";
 
+import bg_image from "../assets/lettered-bg.svg";
+
+var bgImage = {
+  backgroundImage: `url(${bg_image})`
+};
+
 export function Residents() {
   return (
-    <StyledCard className="card residents">
+    <StyledCard className="card residents" style={bgImage}>
       <h2>LIST OF TENANTS</h2>
       {RESIDENTS.map((floor, key) => {
         return (
