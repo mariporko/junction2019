@@ -58,4 +58,14 @@ ul {
 
 .card-large {
   height: 360px;
+  padding: 24px;
+}
+
+.article,
+.sustainability-content {
+  margin: 12px;
+}
+
+.sustainability-content p {
+  margin-bottom: 12px;
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { VictoryChart, VictoryGroup, VictoryBar, VictoryAxis } from 'victory';
+import { VictoryChart, VictoryGroup, VictoryBar, VictoryAxis } from "victory";
 
 import { StyledCard } from "../StyledCard";
 
@@ -51,33 +51,33 @@ export function Sustainability() {
   const averageWater = 6000;
   const averageHeat = 5000;
 
-  const el = [{ x: 1, y: {electricityData} }, { x: 2, y: {averageElectricity} }];
-  const wa = [{ x: 1, y: {waterData} }, { x: 2, y: {averageWater} }];
-  const he = [{ x: 1, y: {heatData} }, { x: 2, y: {averageHeat} }];
+  const el = [
+    { x: 1, y: { electricityData } },
+    { x: 2, y: { averageElectricity } }
+  ];
+  const wa = [
+    { x: 1, y: { waterData } },
+    { x: 2, y: { averageWater } }
+  ];
+  const he = [
+    { x: 1, y: { heatData } },
+    { x: 2, y: { averageHeat } }
+  ];
 
   return (
     <StyledCard className="card-large sustainability">
       <h2>Energy consumption</h2>
-        <VictoryChart height={200}>
-          <VictoryGroup 
-            offset={20}
-            colorScale={"qualitative"}
-          >
-            <VictoryAxis
-              tickValues={[1, 2, 3]}
-              tickFormat={["Electricity", "Water", "Heat"]}
-            />
-            <VictoryBar
-              data={el}
-            />
-            <VictoryBar
-              data={wa}
-            />
-            <VictoryBar
-              data={he}
-            />
-          </VictoryGroup>
-        </VictoryChart>
+      <VictoryChart height={200}>
+        <VictoryGroup offset={20} colorScale={"qualitative"}>
+          <VictoryAxis
+            tickValues={[1, 2, 3]}
+            tickFormat={["Electricity", "Water", "Heat"]}
+          />
+          <VictoryBar data={el} />
+          <VictoryBar data={wa} />
+          <VictoryBar data={he} />
+        </VictoryGroup>
+      </VictoryChart>
     </StyledCard>
   );
 }
@@ -88,7 +88,7 @@ export function SustainabilitySummary() {
 
   return (
     <StyledCard className="card-small sustainability">
-      <h4>In the last month...</h4>
+      <h4 style={{ marginBottom: "12px" }}>In the last month...</h4>
       <p>We have used {electricityData} kWh of electricity.</p>
       <p>We have used {waterData} L of water.</p>
     </StyledCard>

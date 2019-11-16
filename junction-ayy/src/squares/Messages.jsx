@@ -9,17 +9,30 @@ import { MESSAGES } from "../building_information";
 export function Messages() {
   return (
     <StyledCard className="card-large social">
-      <h2>Messages</h2>
+      <h3>Messages</h3>
       {MESSAGES.map((message, key) => {
         const classN = message.important ? "message important" : "message";
         const whichIcon = message.important ? faExclamation : faEnvelope;
 
         return (
           <div className={classN} key={key}>
-            <p className="text">
-              <FontAwesomeIcon icon={whichIcon} /> {message.text}
+            <p
+              className="text flex"
+              style={{ justifyContent: "space-between", margin: "12px 24px" }}
+            >
+              <div className="message flex" style={{ width: "35em" }}>
+                <FontAwesomeIcon
+                  icon={whichIcon}
+                  className="margin-r-medium"
+                  style={{ width: "12px" }}
+                />
+                <span>{message.text}</span>
+              </div>
+              <p className="from" style={{ color: "var(--colorWhite_600)" }}>
+                {"- "}
+                {message.from}
+              </p>
             </p>
-            <p className="from"> {message.from}</p>
           </div>
         );
       })}
@@ -33,7 +46,7 @@ export function MessagesSummary() {
 
   return (
     <StyledCard className="card-small social summary">
-      <h4>Messages</h4>
+      <h4 style={{ marginBottom: "12px" }}>Messages</h4>
       <p>
         <FontAwesomeIcon icon={faExclamation} /> {important} important messages
       </p>
