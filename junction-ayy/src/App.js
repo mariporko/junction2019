@@ -11,12 +11,12 @@ import "./App.css";
 function App() {
   return (
     <Fragment>
-      <header className="header">
+      <header className="header flex">
         <Weather />
         <Greeting />
         <Time />
       </header>
-      <main className="content-area">
+      <main className="content-area flex">
         <div className="column-left">
           <div className="block-large block-main"> skjdhfkjsdh</div>
         </div>
@@ -32,7 +32,7 @@ function App() {
           </div>
         </div>
       </main>
-      <footer className="footer">
+      <footer className="footer flex">
         <AyyInfo />
       </footer>
     </Fragment>
