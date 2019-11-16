@@ -25,3 +25,16 @@ export const RESIDENTS = [
         ],
     },
 ];
+
+export const MESSAGES = [
+    {
+      message: "Hey all! I'm planning on having friends over on Friday 23.11., sorry if we make too much noise! We'll leave around 23.",
+      from: "Teemu from A4",
+      important: false,
+    },
+    {
+        message: "There will be a break in the availability of hot water in 19.11. between 8–12. Sorry for the inconvenience.",
+        from: "AYY",
+        important: true,
+    },
+];

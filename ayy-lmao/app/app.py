@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import cross_origin
 # from flask_sqlalchemy import SQLAlchemy
 # import pathlib
 
@@ -15,26 +16,31 @@ app = Flask(__name__)
 
 
 @app.route('/')
+@cross_origin()
 def index():
     return "Hello Junction!"
 
 
 @app.route('/el', methods=['GET'])
+@cross_origin()
 def el():
     return jsonify(name="electricity", data=[2, 4, 6, 8, 10, 12])
 
 
 @app.route('/heat', methods=['GET'])
+@cross_origin()
 def heat():
     return jsonify(name="heat", data=[2, 4, 6, 8, 10, 12])
 
 
 @app.route('/water', methods=['GET'])
+@cross_origin()
 def water():
     return jsonify(name="water", data=[2, 4, 6, 8, 10, 12])
 
 
 @app.route('/dir', methods=['POST'])
+@cross_origin()
 def dir_post():
     dir = request.json['dir']
 
@@ -50,6 +56,7 @@ def dir_post():
 
 
 @app.route('/dir', methods=['GET'])
+@cross_origin()
 def dir_get():
     return "You requested direction"
 
