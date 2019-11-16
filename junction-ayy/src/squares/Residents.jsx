@@ -5,6 +5,8 @@ import { StyledCard } from "../StyledCard";
 
 import bg_image from "../assets/lettered-bg.svg";
 
+import "./Recidents.css";
+
 var bgImage = {
   backgroundImage: `url(${bg_image})`
 };
@@ -12,7 +14,7 @@ var bgImage = {
 export function Residents() {
   return (
     <StyledCard className="card residents" style={bgImage}>
-      <h2>LIST OF TENANTS</h2>
+      <h2 className="tenant-h1">LIST OF TENANTS</h2>
       {RESIDENTS.map((floor, key) => {
         return (
           <Fragment>
@@ -20,8 +22,8 @@ export function Residents() {
             <ul className="floor">
               {floor.tenants.map((apartment, key1) => {
                 return (
-                  <li className="apartment" key={key1}>
-                    {apartment.number} -{" "}
+                  <li className="apartment tenant-body" key={key1}>
+                    {"A "} {apartment.number} {" - "}
                     {apartment.names.map((name, key2) => {
                       const multiple = key2 > 0;
                       return (

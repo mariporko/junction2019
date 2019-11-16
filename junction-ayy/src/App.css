@@ -40,3 +40,7 @@ html {
 .margin-r {
   margin-right: 12px;
 }
+
+p {
+  margin: 0px;
+}
