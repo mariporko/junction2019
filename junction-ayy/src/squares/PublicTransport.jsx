@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import bus from "../assets/bus.svg";
 import arrow from "../assets/arrow.svg";
 import { StyledCard } from "../StyledCard";
+import "./PublicTransport.css";
 
 export function PublicTransport() {
   const [data, setData] = useState([
@@ -61,13 +62,21 @@ export function PublicTransport() {
       <ul className="hsl-feed">
         {data.map((departure, key) => {
           return (
-            <li className="departure" key={key}>
-              <img className="bus-icon" alt="BUS" src={bus} />
-              <span className="bus-line">{departure.trip.route.shortName}</span>
-              <img className="arrow-icon" alt="->" src={arrow} />
+            <li className="departure flex" key={key}>
+              <div className="bus-type flex">
+                <img className="bus-icon margin-r-small" alt="BUS" src={bus} />
+                <span className="bus-line">
+                  {departure.trip.route.shortName}
+                </span>
+              </div>
+              <img
+                className="arrow-icon margin-r-medium"
+                alt="->"
+                src={arrow}
+              />
               <span className="bus-to">{departure.headsign}</span>
               <span className="departure-time">
-                {nextWillDepart(departure.realtimeDeparture)}
+                {nextWillDepart(departure.realtimeDeparture)} {"'"}
               </span>
             </li>
           );

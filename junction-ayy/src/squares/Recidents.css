@@ -1,10 +1,13 @@
-ul {
-  list-style-type: none;
+.ul-t {
   column-count: 2;
   margin: 6px 0px 12px 0px;
   padding: 0px 12px;
 }
 
-li {
+.li-t {
   margin: 4px 0px;
+}
+
+.r-content {
+  margin-left: 24px;
 }

@@ -9,7 +9,9 @@ export function AyyInfo() {
         <h2>AYYHELLO</h2>
       </div>
       <div className="footer-right flex">
-        <p className="margin-r">Join the house discussion in @ayy-smt-6!</p>
+        <p className="margin-r-small">
+          Join the house discussion in @ayy-smt-6!
+        </p>
         <img
           className="qr-koodi"
           alt="QR-code"

@@ -17,12 +17,12 @@ export function Residents() {
       <h2 className="tenant-h1">LIST OF TENANTS</h2>
       {RESIDENTS.map((floor, key) => {
         return (
-          <Fragment>
+          <div className="r-content">
             <span className="tenant-h2">FLOOR {floor.floor}</span>
-            <ul className="floor">
+            <ul className="floor ul-t">
               {floor.tenants.map((apartment, key1) => {
                 return (
-                  <li className="apartment tenant-body" key={key1}>
+                  <li className="apartment tenant-body li-t" key={key1}>
                     {"A "} {apartment.number} {" - "}
                     {apartment.names.map((name, key2) => {
                       const multiple = key2 > 0;
@@ -36,7 +36,7 @@ export function Residents() {
                 );
               })}
             </ul>
-          </Fragment>
+          </div>
         );
       })}
     </StyledCard>
