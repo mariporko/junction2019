@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Greeting } from "./Greeting";
 import { PublicTransport } from "./squares/PublicTransport";
 import { Weather } from "./squares/Weather";
@@ -10,25 +10,32 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="flex-container">
+    <Fragment>
       <header className="header">
         <Weather />
         <Greeting />
         <Time />
       </header>
-      <div className="flex-item">
-        <PublicTransport />
-      </div>
-      <div className="flex-item">
-        <Residents />
-      </div>
-      <div className="flex-item">
-        <Sustainability />
-      </div>
+      <main className="content-area">
+        <div className="column-left">
+          <div className="block-large block-main"> skjdhfkjsdh</div>
+        </div>
+        <div className="column-right">
+          <div className="flex-item">
+            <PublicTransport />
+          </div>
+          <div className="flex-item">
+            <Residents />
+          </div>
+          <div className="flex-item">
+            <Sustainability />
+          </div>
+        </div>
+      </main>
       <footer className="footer">
         <AyyInfo />
       </footer>
-    </div>
+    </Fragment>
   );
 }
 
