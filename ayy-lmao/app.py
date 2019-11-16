@@ -1,5 +1,10 @@
 from flask import Flask, request, jsonify
+from datetime import date
 from flask_cors import cross_origin
+
+import analysis 
+
+
 # from flask_sqlalchemy import SQLAlchemy
 # import pathlib
 
@@ -13,7 +18,7 @@ app = Flask(__name__)
 # class DataPoint(db.Model):
 #     idx = db.Column(db.Integer, primary_key=True)
 #     val = db.Column(db.Float)
-
+current_week = date.today().isocalendar()[1]
 
 @app.route('/')
 @cross_origin()
@@ -24,20 +29,33 @@ def index():
 @app.route('/el', methods=['GET'])
 @cross_origin()
 def el():
-    return jsonify(name="electricity", data=[2, 4, 6, 8, 10, 12])
+    cur_week_data = analysis.weekly_data['electricity'][str(current_week)]
+    return jsonify(current_week=cur_week_data,
+        average = analysis.weekly_data['electricity']["Average"],
+        maximum = analysis.weekly_data['electricity']["Maximum"],
+        minimum = analysis.weekly_data['electricity']["Minimum"],
+        total = analysis.weekly_data['electricity']["Total"])
 
 
 @app.route('/heat', methods=['GET'])
 @cross_origin()
 def heat():
-    return jsonify(name="heat", data=[2, 4, 6, 8, 10, 12])
-
+    cur_week_data = analysis.weekly_data['heating'][str(current_week)]
+    return jsonify(current_week=cur_week_data,
+        average = analysis.weekly_data['heating']["Average"],
+        maximum = analysis.weekly_data['heating']["Maximum"],
+        minimum = analysis.weekly_data['heating']["Minimum"],
+        total = analysis.weekly_data['heating']["Total"])
 
 @app.route('/water', methods=['GET'])
 @cross_origin()
 def water():
-    return jsonify(name="water", data=[2, 4, 6, 8, 10, 12])
-
+    cur_week_data = analysis.weekly_data['water'][str(current_week)]
+    return jsonify(current_week=cur_week_data,
+        average = analysis.weekly_data['water']["Average"],
+        maximum = analysis.weekly_data['water']["Maximum"],
+        minimum = analysis.weekly_data['water']["Minimum"],
+        total = analysis.weekly_data['water']["Total"])
 
 @app.route('/dir', methods=['POST'])
 @cross_origin()

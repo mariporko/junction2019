@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { VictoryChart, VictoryGroup, VictoryBar, VictoryAxis } from 'victory';
+import { VictoryChart, VictoryGroup, VictoryBar, VictoryAxis } from "victory";
 
 import { StyledCard } from "../StyledCard";
 
@@ -84,7 +84,7 @@ export function SustainabilitySummary() {
 
   return (
     <StyledCard className="card-small sustainability">
-      <h4>In the last month...</h4>
+      <h4 style={{ marginBottom: "12px" }}>In the last month...</h4>
       <p>We have used {electricityData} kWh of electricity.</p>
       <p>We have used {waterData} L of water.</p>
     </StyledCard>

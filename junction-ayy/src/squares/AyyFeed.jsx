@@ -29,7 +29,7 @@ const AYY_DATA = [
 export function AyyFeed() {
   return (
     <StyledCard className="card-large ayy-feed">
-      <h2>AYY NEWS</h2>
+      <h3>AYY NEWS</h3>
       {AYY_DATA.map((article, key) => {
         return (
           <div className="article" key={key}>
@@ -38,7 +38,6 @@ export function AyyFeed() {
           </div>
         );
       })}
-      ;
     </StyledCard>
   );
 }
@@ -48,7 +47,7 @@ export function AyyFeedSummary() {
 
   return (
     <StyledCard className="card-small ayy-feed">
-      <h4>AYY NEWS</h4>
+      <h4 style={{ marginBottom: "12px" }}>AYY NEWS</h4>
       <p className="ayy-small-title">{latestTitle}</p>
     </StyledCard>
   );
