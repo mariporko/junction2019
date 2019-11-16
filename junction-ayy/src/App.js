@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 
-import Carousel from 'nuka-carousel';
+import Carousel from "nuka-carousel";
 
 import { Greeting } from "./Greeting";
 import { PublicTransport } from "./squares/PublicTransport";
@@ -29,12 +29,11 @@ function App() {
         <div className="column-left">
           <div className="block-large block-main"></div>
           <div className="flex-item">
-            <Carousel 
-              slidesToShow={2} 
-              autoplay 
-              autoplayInterval={2000} 
+            <Carousel
+              slidesToShow={2}
+              autoplay
+              autoplayInterval={2000}
               wrapAround
-              slideIndex={indexList.filter(i => i !== current)}
             >
               <Sustainability />
               <AyyFeed />
@@ -42,9 +41,9 @@ function App() {
             </Carousel>
           </div>
           <div className="flex-item">
-            <Carousel 
-              autoplayInterval={2000} 
-              autoplay 
+            <Carousel
+              autoplayInterval={2000}
+              autoplay
               wrapAround
               slideIndex={current}
               afterSlide={i => setCurrent(i)}

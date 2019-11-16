@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCloud, faSmog, faSun, faCloudRain, faSnowflake, faPooStorm } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCloud,
+  faSmog,
+  faSun,
+  faCloudRain,
+  faSnowflake,
+  faPooStorm
+} from "@fortawesome/free-solid-svg-icons";
 
 export function Weather() {
   const [data, setData] = useState({
@@ -29,26 +36,38 @@ export function Weather() {
 
   function weatherIcon() {
     if (data.weather_descriptions[0].toLowerCase().includes("cloud")) {
-      return (<FontAwesomeIcon icon={faCloud} />);
+      return <FontAwesomeIcon icon={faCloud} />;
     } else if (data.weather_descriptions[0].toLowerCase().includes("sun")) {
-      return (<FontAwesomeIcon icon={faSun} />);
-    } else if (data.weather_descriptions[0].toLowerCase().includes("snow") || data.weather_descriptions[0].toLowerCase().includes("sleet")) {
-      return (<FontAwesomeIcon icon={faSnowflake} />);
-    }  else if (data.weather_descriptions[0].toLowerCase().includes("thunder")) {
-        return (<FontAwesomeIcon icon={faPooStorm} />); 
-    } else if (data.weather_descriptions[0].toLowerCase().includes("rain") || data.weather_descriptions[0].toLowerCase().includes("drizzle")) {
-      return (<FontAwesomeIcon icon={faCloudRain} />);
+      return <FontAwesomeIcon icon={faSun} />;
+    } else if (
+      data.weather_descriptions[0].toLowerCase().includes("snow") ||
+      data.weather_descriptions[0].toLowerCase().includes("sleet")
+    ) {
+      return <FontAwesomeIcon icon={faSnowflake} />;
+    } else if (data.weather_descriptions[0].toLowerCase().includes("thunder")) {
+      return <FontAwesomeIcon icon={faPooStorm} />;
+    } else if (
+      data.weather_descriptions[0].toLowerCase().includes("rain") ||
+      data.weather_descriptions[0].toLowerCase().includes("drizzle")
+    ) {
+      return <FontAwesomeIcon icon={faCloudRain} />;
     } else if (data.weather_descriptions[0].toLowerCase().includes("mist")) {
-      return (<FontAwesomeIcon icon={faSmog} />); 
+      return <FontAwesomeIcon icon={faSmog} />;
     }
   }
 
   return (
     <div className="weather">
-      <h2>{data.temperature} &#8451;</h2>
-      {weatherIcon()}
-      <p>(Feels more like {data.feelslike} &#8451;)</p>
-      <p>{data.weather_descriptions[0]}</p>
+      <div className="weather-main flex">
+        <h2>{data.temperature} &#8451;</h2>
+        <div className="weather-description">
+          {weatherIcon()}
+          <p>{data.weather_descriptions[0]}</p>
+        </div>
+      </div>
+      <div className="weather-description">
+        <p>(Feels more like {data.feelslike} &#8451;)</p>
+      </div>
     </div>
   );
 }
