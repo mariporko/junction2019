@@ -62,7 +62,7 @@ export function Weather() {
         <h2 className="margin-r-medium">{data.temperature} &#8451;</h2>
         <div className="weather-description">
           {weatherIcon()}
-          <p className="body-info">{data.weather_descriptions[0]}</p>
+          <p className="text-small">{data.weather_descriptions[0]}</p>
         </div>
       </div>
       <div className="weather-feels">
