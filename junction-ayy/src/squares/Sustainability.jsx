@@ -1,4 +1,5 @@
-import React, { useEffect, useState, Fragment } from "react";
+import React, { useEffect, useState } from "react";
+import { VictoryChart, VictoryGroup, VictoryBar, VictoryAxis } from 'victory';
 
 import { StyledCard } from "../StyledCard";
 
@@ -46,12 +47,37 @@ export function Sustainability() {
     });
   }, []);
 
+  const averageElectricity = 4000;
+  const averageWater = 6000;
+  const averageHeat = 5000;
+
+  const el = [{ x: 1, y: {electricityData} }, { x: 2, y: {averageElectricity} }];
+  const wa = [{ x: 1, y: {waterData} }, { x: 2, y: {averageWater} }];
+  const he = [{ x: 1, y: {heatData} }, { x: 2, y: {averageHeat} }];
+
   return (
     <StyledCard className="card-large sustainability">
       <h2>Energy consumption</h2>
-      <p>Electricity: {electricityData}</p>
-      <p>Water: {waterData}</p>
-      <p>Heat: {heatData}</p>
+        <VictoryChart height={200}>
+          <VictoryGroup 
+            offset={20}
+            colorScale={"qualitative"}
+          >
+            <VictoryAxis
+              tickValues={[1, 2, 3]}
+              tickFormat={["Electricity", "Water", "Heat"]}
+            />
+            <VictoryBar
+              data={el}
+            />
+            <VictoryBar
+              data={wa}
+            />
+            <VictoryBar
+              data={he}
+            />
+          </VictoryGroup>
+        </VictoryChart>
     </StyledCard>
   );
 }

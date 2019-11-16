@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import { RESIDENTS } from "../building_information";
 import { StyledCard } from "../StyledCard";
