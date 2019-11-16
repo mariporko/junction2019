@@ -8,3 +8,26 @@ html {
     #231434 100%
   );
 }
+
+.header,
+footer,
+footer-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px;
+}
+
+.content-area {
+  padding: 0px 48px;
+  display: flex;
+}
+
+.column-left {
+  width: 64%;
+  margin-right: 24px;
+}
+
+.column-right {
+  flex-grow: 100;
+}
