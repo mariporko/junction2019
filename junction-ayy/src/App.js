@@ -1,11 +1,12 @@
-import React from 'react';
-import { Greeting } from './Greeting';
-import { PublicTransport } from './squares/PublicTransport';
-import { Weather } from './squares/Weather';
-import { Residents } from './squares/Residents';
-import { Sustainability } from './squares/Sustainability';
-import { AyyInfo } from './squares/AyyInfo';
-import { Time } from './squares/Time';
+import React from "react";
+import { Greeting } from "./Greeting";
+import { PublicTransport } from "./squares/PublicTransport";
+import { Weather } from "./squares/Weather";
+import { Residents } from "./squares/Residents";
+import { Sustainability } from "./squares/Sustainability";
+import { AyyInfo } from "./squares/AyyInfo";
+import { Time } from "./squares/Time";
+import "./App.css";
 
 function App() {
   return (

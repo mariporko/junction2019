@@ -1,22 +1,10 @@
-.App {
-  text-align: center;
-}
+@import "./styles/fonts.css";
+@import "./styles/palette.css";
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+html {
+  background: radial-gradient(
+    94.17% 94.17% at 50% 5.83%,
+    #55307f 0%,
+    #231434 100%
+  );
 }

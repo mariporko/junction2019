@@ -1,0 +1,14 @@
+:root {
+  --colorBrandPrimary: #55307f;
+
+  --colorBlack_900: rgba(0, 0, 0, 0.9);
+  --colorBlack_800: rgba(0, 0, 0, 0.8);
+  --colorBlack_700: rgba(0, 0, 0, 0.7);
+  --colorBlack_600: rgba(0, 0, 0, 0.6);
+
+  --colorWhite: rgba(255, 255, 255, 1);
+  --colorWhite_900: rgba(255, 255, 255, 0.9);
+  --colorWhite_800: rgba(255, 255, 255, 0.8);
+  --colorWhite_700: rgba(255, 255, 255, 0.7);
+  --colorWhite_600: rgba(255, 255, 255, 0.6);
+}
