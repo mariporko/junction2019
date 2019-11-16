@@ -28,18 +28,18 @@ export function Weather() {
   }, []);
 
   function weatherIcon() {
-    if (data.weather_icons[0].includes("cloud")) {
+    if (data.weather_descriptions[0].toLowerCase().includes("cloud")) {
       return (<FontAwesomeIcon icon={faCloud} />);
-    } else if (data.weather_icons[0].includes("sun")) {
+    } else if (data.weather_descriptions[0].toLowerCase().includes("sun")) {
       return (<FontAwesomeIcon icon={faSun} />);
-    } else if (data.weather_icons[0].includes("snow") || data.weather_icons[0].includes("sleet")) {
+    } else if (data.weather_descriptions[0].toLowerCase().includes("snow") || data.weather_descriptions[0].toLowerCase().includes("sleet")) {
       return (<FontAwesomeIcon icon={faSnowflake} />);
-    } else if (data.weather_icons[0].includes("mist")) {
-      return (<FontAwesomeIcon icon={faSmog} />); 
-    }  else if (data.weather_icons[0].includes("thunder")) {
+    }  else if (data.weather_descriptions[0].toLowerCase().includes("thunder")) {
         return (<FontAwesomeIcon icon={faPooStorm} />); 
-    } else if (data.weather_icons[0].includes("rain") || data.weather_icons[0].includes("drizzle")) {
+    } else if (data.weather_descriptions[0].toLowerCase().includes("rain") || data.weather_descriptions[0].toLowerCase().includes("drizzle")) {
       return (<FontAwesomeIcon icon={faCloudRain} />);
+    } else if (data.weather_descriptions[0].toLowerCase().includes("mist")) {
+      return (<FontAwesomeIcon icon={faSmog} />); 
     }
   }
 
