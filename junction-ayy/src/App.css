@@ -31,3 +31,7 @@ footer-right {
 .column-right {
   flex-grow: 100;
 }
+
+.residents {
+  background-image: url("./assets/lettered-bg.svg");
+}
