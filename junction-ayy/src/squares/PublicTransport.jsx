@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from '@material-ui/core/Card';
+import bus from '../assets/bus.svg';
+import arrow from '../assets/arrow.svg';
 
 export function PublicTransport() {
 
@@ -57,8 +59,10 @@ export function PublicTransport() {
                 {data.map((departure, key) => {
                     return (
                         <li className="departure" key={key}>
-                            <img className="bus-icon" alt="BUS" /> 
-                            <span className="bus-line">{departure.trip.route.shortName} -> {departure.headsign}</span>
+                            <img className="bus-icon" alt="BUS" src={bus} /> 
+                            <span className="bus-line">{departure.trip.route.shortName}</span>
+                            <img className="arrow-icon" alt="->" src={arrow} /> 
+                            <span className="bus-to">{departure.headsign}</span>
                             <span className="departure-time">{nextWillDepart(departure.realtimeDeparture)}</span>
                         </li>
                     );
