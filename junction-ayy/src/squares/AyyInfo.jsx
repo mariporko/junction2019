@@ -17,14 +17,21 @@ export function AyyInfo() {
         <h2>AYYHELLO</h2>
       </div> */}
       <div className="footer-right flex">
-        <p className="margin-r-small">
-          Join the house discussion in @ayy-smt-6!
+        <p
+          className="margin-r-medium"
+          style={{ textAlign: "right", lineHeight: "1.5em" }}
+        >
+          Join the house discussion<br></br>in{" "}
+          <span style={{ fontWeight: "bold", color: "#EEBC32" }}>
+            @ayy-smt-6
+          </span>
+          !
         </p>
         <img
           className="qr-koodi"
           alt="QR-code"
           src={code}
-          style={{ height: "120px" }}
+          style={{ height: "108px" }}
         />
       </div>
     </Fragment>
