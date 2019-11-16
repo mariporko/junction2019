@@ -14,7 +14,7 @@ import {
 } from "./squares/Sustainability";
 import { AyyInfo } from "./squares/AyyInfo";
 import { Time } from "./squares/Time";
-import { AyyFeed } from "./squares/AyyFeed";
+import { AyyFeed, AyyFeedSummary } from "./squares/AyyFeed";
 import { Messages, MessagesSummary } from "./squares/Messages";
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
           <div className="block-large block-main"></div>
           <div className="flex-item">
             <Carousel
-              autoplayInterval={4000}
+              autoplayInterval={6000}
               autoplay
               wrapAround
               slidesToShow={2}
@@ -46,7 +46,7 @@ function App() {
               beforeSlide={c => setCurrent(c)}
             >
               <SustainabilitySummary />
-              <AyyFeed />
+              <AyyFeedSummary />
               <MessagesSummary />
             </Carousel>
           </div>

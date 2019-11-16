@@ -9,7 +9,7 @@ import { MESSAGES } from "../building_information";
 export function Messages() {
 
   return (
-    <StyledCard className="card social">
+    <StyledCard className="card-large social">
       <h2>Messages</h2>
       {MESSAGES.map((message, key) => {
         const classN = message.important ? "message important" : "message";
@@ -31,7 +31,7 @@ export function MessagesSummary() {
   const other = MESSAGES.length - important;
 
   return (
-    <StyledCard className="card social summary">
+    <StyledCard className="card-small social summary">
       <h4>Messages</h4>
       <p><FontAwesomeIcon icon={faExclamation} /> {important} important messages</p>
       <p><FontAwesomeIcon icon={faEnvelope} /> {other} other messags</p>
