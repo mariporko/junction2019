@@ -59,13 +59,13 @@ export function Weather() {
   return (
     <div className="weather">
       <div className="weather-main flex">
-        <h2 className="margin-r-small">{data.temperature} &#8451;</h2>
+        <h2 className="margin-r-medium">{data.temperature} &#8451;</h2>
         <div className="weather-description">
           {weatherIcon()}
-          <p>{data.weather_descriptions[0]}</p>
+          <p className="body-info">{data.weather_descriptions[0]}</p>
         </div>
       </div>
-      <div className="weather-description">
+      <div className="weather-feels">
         <p className="body-info">Feels like {data.feelslike} &#8451;</p>
       </div>
     </div>
