@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { Fragment } from "react";
 import Card from "@material-ui/core/Card";
 
 import { RESIDENTS } from "../building_information";
