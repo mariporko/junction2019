@@ -37,6 +37,16 @@ html {
   background-image: url("./assets/lettered-bg.svg");
 }
 
-.margin-r {
+.margin-r-small {
+  margin-right: 6px;
+}
+.margin-r-medium {
   margin-right: 12px;
+}
+
+p {
+  margin: 0px;
+}
+ul {
+  list-style-type: none;
 }

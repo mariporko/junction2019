@@ -6,7 +6,9 @@ h2,
 h4,
 body,
 .body-info,
-.tenant-h2 {
+.tenant-h1,
+.tenant-h2,
+.tenant-body {
   margin: 0px;
   color: var(--colorWhite);
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -31,21 +33,30 @@ h4 {
 
 body {
   size: 16px;
-  color: var(--colorWhite_800);
+  color: var(--colorWhite_900);
 }
 
 .body-info {
   size: 14px;
-  color: var(--colorWhite_900);
+  color: var(--colorWhite_800);
 }
 
-.tenant-h2 {
-  font-size: 36px;
+.tenant-h1,
+.tenant-h2,
+.tenant-body {
   font-family: "Bebas Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
 }
 
-p {
-  margin: 0px;
+.tenant-h1 {
+  font-size: 24px;
+  text-align: center;
+}
+.tenant-h2 {
+  font-size: 22px;
+  text-align: center;
+}
+.tenant-body {
+  font-size: 16px;
 }
