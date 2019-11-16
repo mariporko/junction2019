@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import Card from '@material-ui/core/Card';
 
 import { RESIDENTS } from '../building_information';
@@ -6,27 +6,29 @@ import { RESIDENTS } from '../building_information';
 export function Residents() {
 
     return (
-        <Card className="card">
-            <h1>List of tenants</h1>
+        <Card className="card residents">
+            <h2>LIST OF TENANTS</h2>
             {RESIDENTS.map((floor, key) => {
-                console.log(floor);
                 return (
-                    <li className="floor" key={key}>
+                    <Fragment>
                         <span>FLOOR {floor.floor}</span>
-                        {floor.tenants.map((apartment, key) => {
-                            return (
-                                <li className="apartment" key={key}>
-                                    {apartment.number}: {apartment.names.map((name, key) => {
-                                        return (
-                                            <span className="name" key={key}>
-                                                {name}
-                                            </span>
-                                        );
-                                    })}
-                                </li>
-                            );
-                        })}
-                    </li>
+                        <ul className="floor">
+                            {floor.tenants.map((apartment, key1) => {
+                                return (
+                                    <li className="apartment" key={key1}>
+                                        {apartment.number} - {apartment.names.map((name, key2) => {
+                                            const multiple = key2 > 0;
+                                            return (
+                                                <span className="name" key={key2}>
+                                                    {multiple && ','} {name}
+                                                </span>
+                                            );
+                                        })}
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </Fragment>
                 );
             })}
         </Card>

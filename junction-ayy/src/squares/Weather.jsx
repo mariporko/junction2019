@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import {
-    graphql,
-    GraphQLSchema,
-    GraphQLObjectType,
-    GraphQLString,
-  } from 'graphql';
 import Card from '@material-ui/core/Card';
 
 export function Weather() {
 
-    const [data, setData] = useState({temperateure: 0});
+    const [data, setData] = useState({temperature: 0, weather_descriptions: [""], feelslike: 0});
 
     useEffect(() => {
         const request = require('request');
@@ -27,9 +21,10 @@ export function Weather() {
     }, []);
 
     return (
-        <Card className="card">
-            <h1>Weather</h1>
-            <p>Temperature in Espoo is currently {data.temperature} &#8451;!</p>
+        <Card className="card weather">
+            <h2>{data.temperature} &#8451;</h2>
+            <p>(Feels more like {data.feelslike} &#8451;)</p>
+            <p>{data.weather_descriptions[0]}</p>
         </Card>
     );
 }
