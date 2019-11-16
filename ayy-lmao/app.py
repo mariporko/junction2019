@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from datetime import date
+from flask_cors import cross_origin
 
 import analysis 
 
@@ -20,11 +21,13 @@ app = Flask(__name__)
 current_week = date.today().isocalendar()[1]
 
 @app.route('/')
+@cross_origin()
 def index():
     return "Hello Junction!"
 
 
 @app.route('/el', methods=['GET'])
+@cross_origin()
 def el():
     cur_week_data = analysis.weekly_data['electricity'][str(current_week)]
     return jsonify(current_week=cur_week_data,
@@ -35,6 +38,7 @@ def el():
 
 
 @app.route('/heat', methods=['GET'])
+@cross_origin()
 def heat():
     cur_week_data = analysis.weekly_data['heating'][str(current_week)]
     return jsonify(current_week=cur_week_data,
@@ -44,6 +48,7 @@ def heat():
         total = analysis.weekly_data['heating']["Total"])
 
 @app.route('/water', methods=['GET'])
+@cross_origin()
 def water():
     cur_week_data = analysis.weekly_data['water'][str(current_week)]
     return jsonify(current_week=cur_week_data,
@@ -53,6 +58,7 @@ def water():
         total = analysis.weekly_data['water']["Total"])
 
 @app.route('/dir', methods=['POST'])
+@cross_origin()
 def dir_post():
     dir = request.json['dir']
 
@@ -68,6 +74,7 @@ def dir_post():
 
 
 @app.route('/dir', methods=['GET'])
+@cross_origin()
 def dir_get():
     return "You requested direction"
 

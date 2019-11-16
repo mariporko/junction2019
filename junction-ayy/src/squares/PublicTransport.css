@@ -1,0 +1,23 @@
+.hsl-feed {
+  margin: 12px 0 0 0;
+  padding: 0px;
+  color: var(--colorWhite_900);
+}
+
+.departure {
+  background-color: var(--colorWhite_100);
+  margin-bottom: 6px;
+  border-radius: 2px;
+  height: 32px;
+}
+
+.bus-type {
+  width: 78px;
+  margin-left: 12px;
+}
+
+.departure-time {
+  margin-left: auto;
+  margin-right: 12px;
+  font-weight: bold;
+}

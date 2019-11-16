@@ -35,10 +35,20 @@ export function Time() {
     return months[timeNow.getMonth()];
   }
 
+  function hours() {
+    if (timeNow.getHours() < 10) return "0" + timeNow.getHours();
+    else return timeNow.getHours()
+  }
+
+  function minutes() {
+    if (timeNow.getMinutes() < 10) return "0" + timeNow.getMinutes();
+    else return timeNow.getMinutes();
+  }
+
   return (
     <div className="time">
       <h2>
-        {timeNow.getHours()}:{timeNow.getMinutes()}
+        {hours()}:{minutes()}
       </h2>
       <p>
         {getWeekday()}, {getMonthName()} {timeNow.getDate()}

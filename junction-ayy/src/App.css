@@ -22,6 +22,7 @@ html {
 
 .content-area {
   padding: 0px 48px;
+  align-items: flex-start;
 }
 
 .column-left {
@@ -37,10 +38,34 @@ html {
   background-image: url("./assets/lettered-bg.svg");
 }
 
-.margin-r {
+.margin-r-small {
+  margin-right: 6px;
+}
+.margin-r-medium {
   margin-right: 12px;
 }
 
 p {
   margin: 0px;
+}
+ul {
+  list-style-type: none;
+}
+
+.card-small {
+  height: 120px;
+}
+
+.card-large {
+  height: 360px;
+  padding: 24px;
+}
+
+.article,
+.sustainability-content {
+  margin: 12px;
+}
+
+.sustainability-content p {
+  margin-bottom: 12px;
 }

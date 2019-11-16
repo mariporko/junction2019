@@ -1,25 +1,28 @@
 import React, { Fragment, useState } from "react";
 
+import "./App.css";
+
 import Carousel from "nuka-carousel";
 
 import { Greeting } from "./Greeting";
 import { PublicTransport } from "./squares/PublicTransport";
 import { Weather } from "./squares/Weather";
 import { Residents } from "./squares/Residents";
-import { Sustainability } from "./squares/Sustainability";
+import {
+  Sustainability,
+  SustainabilitySummary
+} from "./squares/Sustainability";
 import { AyyInfo } from "./squares/AyyInfo";
 import { Time } from "./squares/Time";
-import { AyyFeed } from "./squares/AyyFeed";
-import { Social } from "./squares/Social";
-
-import "./App.css";
+import { AyyFeed, AyyFeedSummary } from "./squares/AyyFeed";
+import { Messages, MessagesSummary } from "./squares/Messages";
 
 function App() {
-  const [current, setCurrent] = useState(0);
-  
+  const [current, setCurrent] = useState(2);
+
   const showSustainability = current === 0;
   const showAyyFeed = current === 1;
-  const showSocial = current === 2;
+  const showMessages = current === 2;
 
   return (
     <Fragment>
@@ -32,26 +35,26 @@ function App() {
         <div className="column-left">
           <div className="block-large block-main"></div>
           <div className="flex-item">
-            <Carousel 
-              autoplayInterval={4000} 
-              autoplay 
+            <Carousel
+              autoplayInterval={6000}
+              autoplay
               wrapAround
               slidesToShow={2}
-              renderBottomCenterControls={<></>}
-              renderCenterLeftControls={<></>}
-              renderCenterRightControls={<></>}
-              beforeSlide={(c) => setCurrent(c)}
+              renderBottomCenterControls={() => {}}
+              renderCenterLeftControls={() => {}}
+              renderCenterRightControls={() => {}}
+              beforeSlide={c => setCurrent(c)}
             >
-              <Sustainability />
-              <AyyFeed />
-              <Social />
+              <SustainabilitySummary />
+              <AyyFeedSummary />
+              <MessagesSummary />
             </Carousel>
           </div>
           <div className="flex-item">
             <div className="content-card">
               {showSustainability && <Sustainability />}
-              {showAyyFeed &&<AyyFeed />}
-              {showSocial && <Social />}
+              {showAyyFeed && <AyyFeed />}
+              {showMessages && <Messages />}
             </div>
           </div>
         </div>
