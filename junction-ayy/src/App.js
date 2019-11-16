@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 
-import Carousel from 'nuka-carousel';
+import Carousel from "nuka-carousel";
 
 import { Greeting } from "./Greeting";
 import { PublicTransport } from "./squares/PublicTransport";

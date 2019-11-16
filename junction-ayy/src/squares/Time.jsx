@@ -1,4 +1,5 @@
 import React from "react";
+import "./Time.css";
 
 export function Time() {
   const timeNow = new Date();

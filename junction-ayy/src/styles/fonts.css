@@ -1,62 +1,51 @@
 @import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Open+Sans&display=swap");
 @import "./palette.css";
 
-h1 {
-  size: 48px;
+h1,
+h2,
+h4,
+body,
+.body-info,
+.tenant-h2 {
+  margin: 0px;
   color: var(--colorWhite);
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  size: 48px;
 }
 
 h2 {
   size: 36px;
   color: var(--colorWhite_800);
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 h4 {
   size: 18px;
-  color: var(--colorWhite);
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   size: 16px;
   color: var(--colorWhite_800);
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .body-info {
   size: 14px;
-  color: var(--colorWhite);
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--colorWhite_900);
 }
 
 .tenant-h2 {
   font-size: 36px;
-  color: var(--colorWhite);
   font-family: "Bebas Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin: 0px;
 }
