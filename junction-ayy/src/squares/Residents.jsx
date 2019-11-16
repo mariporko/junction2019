@@ -31,7 +31,6 @@ export function Residents() {
           </Fragment>
         );
       })}
-      ); })}
     </StyledCard>
   );
 }
