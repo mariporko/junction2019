@@ -31,7 +31,8 @@ h4 {
   size: 18px;
 }
 
-body {
+body,
+p {
   size: 16px;
   color: var(--colorWhite_900);
 }
@@ -47,15 +48,18 @@ body {
   font-family: "Bebas Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
+  letter-spacing: 0.05em;
 }
 
 .tenant-h1 {
   font-size: 24px;
   text-align: center;
+  letter-spacing: 0.2em;
 }
 .tenant-h2 {
   font-size: 22px;
   text-align: center;
+  letter-spacing: 0.1em;
 }
 .tenant-body {
   font-size: 16px;

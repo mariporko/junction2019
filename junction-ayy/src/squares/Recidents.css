@@ -1,7 +1,7 @@
 .ul-t {
   column-count: 2;
-  margin: 6px 0px 12px 0px;
-  padding: 0px 12px;
+  margin: 6px 0px 24px 0px;
+  padding: 0px;
 }
 
 .li-t {
@@ -9,5 +9,6 @@
 }
 
 .r-content {
-  margin-left: 24px;
+  margin-left: 12px;
+  margin-top: 24px;
 }

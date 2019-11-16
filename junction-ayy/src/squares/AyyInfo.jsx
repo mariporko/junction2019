@@ -16,7 +16,7 @@ export function AyyInfo() {
           className="qr-koodi"
           alt="QR-code"
           src={code}
-          style={{ height: "140px" }}
+          style={{ height: "120px" }}
         />
       </div>
     </Fragment>

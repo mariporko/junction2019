@@ -8,7 +8,10 @@ import { Greeting } from "./Greeting";
 import { PublicTransport } from "./squares/PublicTransport";
 import { Weather } from "./squares/Weather";
 import { Residents } from "./squares/Residents";
-import { Sustainability, SustainabilitySummary } from "./squares/Sustainability";
+import {
+  Sustainability,
+  SustainabilitySummary
+} from "./squares/Sustainability";
 import { AyyInfo } from "./squares/AyyInfo";
 import { Time } from "./squares/Time";
 import { AyyFeed } from "./squares/AyyFeed";
@@ -40,7 +43,7 @@ function App() {
               renderBottomCenterControls={() => {}}
               renderCenterLeftControls={() => {}}
               renderCenterRightControls={() => {}}
-              beforeSlide={(c) => setCurrent(c)}
+              beforeSlide={c => setCurrent(c)}
             >
               <SustainabilitySummary />
               <AyyFeed />

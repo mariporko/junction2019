@@ -22,6 +22,7 @@ html {
 
 .content-area {
   padding: 0px 48px;
+  align-items: flex-start;
 }
 
 .column-left {
@@ -49,4 +50,12 @@ p {
 }
 ul {
   list-style-type: none;
+}
+
+.card-small {
+  height: 120px;
+}
+
+.card-large {
+  height: 360px;
 }
