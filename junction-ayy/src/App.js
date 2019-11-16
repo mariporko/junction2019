@@ -16,7 +16,10 @@ import "./App.css";
 
 function App() {
   const [current, setCurrent] = useState(0);
-  const indexList = [0, 1, 2];
+  
+  const showSustainability = current === 0;
+  const showAyyFeed = current === 1;
+  const showSocial = current === 2;
 
   return (
     <Fragment>
@@ -30,11 +33,14 @@ function App() {
           <div className="block-large block-main"></div>
           <div className="flex-item">
             <Carousel 
-              slidesToShow={2} 
+              autoplayInterval={4000} 
               autoplay 
-              autoplayInterval={2000} 
               wrapAround
-              slideIndex={indexList.filter(i => i !== current)}
+              slidesToShow={2}
+              renderBottomCenterControls={<></>}
+              renderCenterLeftControls={<></>}
+              renderCenterRightControls={<></>}
+              beforeSlide={(c) => setCurrent(c)}
             >
               <Sustainability />
               <AyyFeed />
@@ -42,17 +48,11 @@ function App() {
             </Carousel>
           </div>
           <div className="flex-item">
-            <Carousel 
-              autoplayInterval={2000} 
-              autoplay 
-              wrapAround
-              slideIndex={current}
-              afterSlide={i => setCurrent(i)}
-            >
-              <Sustainability />
-              <AyyFeed />
-              <Social />
-            </Carousel>
+            <div className="content-card">
+              {showSustainability && <Sustainability />}
+              {showAyyFeed &&<AyyFeed />}
+              {showSocial && <Social />}
+            </div>
           </div>
         </div>
         <div className="column-right">
