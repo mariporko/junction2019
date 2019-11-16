@@ -4,9 +4,9 @@ import { VictoryChart, VictoryGroup, VictoryBar, VictoryAxis } from 'victory';
 import { StyledCard } from "../StyledCard";
 
 export function Sustainability() {
-  const [electricityData, setElectricityData] = useState();
-  const [heatData, setHeatData] = useState();
-  const [waterData, setWaterData] = useState();
+  const [electricityData, setElectricityData] = useState({current_week: 0, average: 0});
+  const [heatData, setHeatData] = useState({current_week: 0, average: 0});
+  const [waterData, setWaterData] = useState({current_week: 0, average: 0});
 
   const electricity = "http://localhost:5000/el";
   const heat = "http://localhost:5000/heat";
@@ -32,12 +32,12 @@ export function Sustainability() {
 
     request(el_req, function(error, response, body) {
       if (!error && response.statusCode === 200) {
-        setElectricityData(JSON.parse(body).data);
+        setElectricityData(JSON.parse(body).data[0]);
       }
     });
     request(water_req, function(error, response, body) {
       if (!error && response.statusCode === 200) {
-        setWaterData(JSON.parse(body).data);
+        setWaterData(JSON.parse(body).data[0]);
       }
     });
     request(heat_req, function(error, response, body) {
@@ -47,17 +47,10 @@ export function Sustainability() {
     });
   }, []);
 
-  const averageElectricity = 4000;
-  const averageWater = 6000;
-  const averageHeat = 5000;
-
-  const el = [{ x: 1, y: {electricityData} }, { x: 2, y: {averageElectricity} }];
-  const wa = [{ x: 1, y: {waterData} }, { x: 2, y: {averageWater} }];
-  const he = [{ x: 1, y: {heatData} }, { x: 2, y: {averageHeat} }];
-
   return (
     <StyledCard className="card-large sustainability">
       <h2>Energy consumption</h2>
+      <p>When compared to the weekly average values.</p>
         <VictoryChart height={200}>
           <VictoryGroup 
             offset={20}
@@ -68,13 +61,16 @@ export function Sustainability() {
               tickFormat={["Electricity", "Water", "Heat"]}
             />
             <VictoryBar
-              data={el}
+              style={{ data: { fill: ({ datum }) => datum.x < 2 ? "var(--blue)" : "var(--orange)" } }}
+              data={[{ x: 1, y: electricityData.current_week }, { x: 2, y: electricityData.average }]}
             />
             <VictoryBar
-              data={wa}
+              style={{ data: { fill: ({ datum }) => datum.x < 2 ? "var(--blue)" : "var(--orange)" } }}
+              data={[{ x: 1, y: waterData.current_week }, { x: 2, y: waterData.average }]}
             />
             <VictoryBar
-              data={he}
+              style={{ data: { fill: ({ datum }) => datum.x < 2 ? "var(--blue)" : "var(--orange)" } }}
+              data={[{ x: 1, y: heatData.current_week }, { x: 2, y: heatData.average }]}
             />
           </VictoryGroup>
         </VictoryChart>

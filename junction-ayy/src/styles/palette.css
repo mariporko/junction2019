@@ -6,6 +6,9 @@
   --colorBlack_700: rgba(0, 0, 0, 0.7);
   --colorBlack_600: rgba(0, 0, 0, 0.6);
 
+  --orange: #EEBC32;
+  --blue: linear-gradient(180deg, #B8E0E2 0%, #47BEC6 100%);
+
   --colorWhite: rgba(255, 255, 255, 1);
   --colorWhite_900: rgba(255, 255, 255, 0.9);
   --colorWhite_800: rgba(255, 255, 255, 0.8);
