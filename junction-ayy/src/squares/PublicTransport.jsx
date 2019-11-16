@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Card from '@material-ui/core/Card';
 import bus from '../assets/bus.svg';
 import arrow from '../assets/arrow.svg';
+import { StyledCard } from '../StyledCard';
 
 export function PublicTransport() {
 
@@ -53,7 +53,7 @@ export function PublicTransport() {
     }
 
     return (
-        <Card className="card travel">
+        <StyledCard className="card travel">
             <h3>Public transportation</h3>
             <ul className="hsl-feed">
                 {data.map((departure, key) => {
@@ -68,6 +68,6 @@ export function PublicTransport() {
                     );
                 })}
             </ul>
-        </Card>
+        </StyledCard>
     );
 }

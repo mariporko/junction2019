@@ -1,12 +1,12 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
+import { StyledCard } from '../StyledCard';
 
 export function Sustainability() {
 
     return (
-        <Card className="card sustainability">
+        <StyledCard className="card sustainability">
             <h2>Energy consumption</h2>
             
-        </Card>
+        </StyledCard>
     );
 }

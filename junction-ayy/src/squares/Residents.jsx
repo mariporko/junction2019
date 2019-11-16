@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
-import Card from "@material-ui/core/Card";
 
 import { RESIDENTS } from "../building_information";
+import { StyledCard } from "../StyledCard";
 
 export function Residents() {
   return (
-    <Card className="card residents">
+    <StyledCard className="card residents">
       <h2>LIST OF TENANTS</h2>
       {RESIDENTS.map((floor, key) => {
         return (
@@ -32,6 +32,6 @@ export function Residents() {
         );
       })}
       ); })}
-    </Card>
+    </StyledCard>
   );
 }
