@@ -16,6 +16,7 @@ import { AyyInfo } from "./squares/AyyInfo";
 import { Time } from "./squares/Time";
 import { AyyFeed, AyyFeedSummary } from "./squares/AyyFeed";
 import { Messages, MessagesSummary } from "./squares/Messages";
+import { Game } from "./squares/Game";
 
 function App() {
   const [current, setCurrent] = useState(2);
@@ -56,6 +57,9 @@ function App() {
               {showAyyFeed && <AyyFeed />}
               {showMessages && <Messages />}
             </div>
+          </div>
+          <div className="flex-item">
+            <Game />
           </div>
         </div>
         <div className="column-right">
