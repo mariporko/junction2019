@@ -19,7 +19,7 @@ import { Messages, MessagesSummary } from "./squares/Messages";
 import { Game } from "./squares/Game";
 
 function App() {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(2);
 
   const showSustainability = current === 0;
   const showAyyFeed = current === 1;
@@ -38,7 +38,7 @@ function App() {
           <div className="flex-item">
             <Carousel
               autoplayInterval={10000}
-              /*autoplay*/
+              autoplay
               wrapAround
               slidesToShow={2}
               renderBottomCenterControls={() => {}}
