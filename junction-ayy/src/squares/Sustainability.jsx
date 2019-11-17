@@ -43,7 +43,7 @@ export function Sustainability() {
           className="chart-img"
           alt="chart image"
           src={chart}
-          style={{ width: "700px", margin: "24px auto auto 140px" }}
+          style={{ width: "620px", margin: "24px auto auto 24px" }}
         />
       </div>
 
