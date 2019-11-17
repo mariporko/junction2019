@@ -11,7 +11,7 @@
 Students living in student apartments do not necessarily feel communality. We aim to fix this by using a mix of fun and facts. Improving students' wellbeing is benefit for everybody.
 We developed our solution with sustainability in mind.
 We aim to encourage sustainable lifestyle including reducing energy and water consumption.
-By bringing a bit of joy to tenants day we hope to make an impact however small to the world every day.
+By bringing a bit of joy to tenants' day we hope to make an impact however small to the world every day.
 
 ## Technologies used
 
@@ -27,4 +27,4 @@ Python gesture detection algorithm producing directions to backend.
 
 ## Future plans
 
-We would like to see our solution or parts of it to be implemented at AYY apartment buildings.
+We would like to see our solution or parts of it implemented at AYY apartment buildings.
