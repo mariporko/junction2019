@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { StyledCard } from "../StyledCard";
 
 import raised_hands from "../assets/raised-hands.svg";
+import cat_1 from "../assets/game-images/cat-1.jpeg";
+import dog_1 from "../assets/game-images/dog-1.jpeg";
 
 export function Game() {
   const [direction, setDirection] = useState("");
@@ -78,7 +80,7 @@ export function Game() {
           <img
             className="game-img"
             alt="game instruction image"
-            src={raised_hands}
+            src={cat_1}
             style={{
               height: "200px",
               paddingTop: "24px",
@@ -91,7 +93,7 @@ export function Game() {
           <img
             className="game-img"
             alt="game instruction image"
-            src={raised_hands}
+            src={dog_1}
             style={{
               height: "200px",
               paddingTop: "24px",
