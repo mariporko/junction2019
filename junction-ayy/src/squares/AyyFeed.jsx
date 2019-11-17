@@ -1,5 +1,6 @@
 import React from "react";
 import { StyledCard } from "../StyledCard";
+import circle_img from "../assets/news-circle.svg";
 
 const AYY_DATA = [
   {
@@ -46,9 +47,17 @@ export function AyyFeedSummary() {
   const latestTitle = AYY_DATA[0].title;
 
   return (
-    <StyledCard className="card-small ayy-feed">
-      <h4 style={{ marginBottom: "12px" }}>AYY NEWS</h4>
-      <p className="ayy-small-title">{latestTitle}</p>
+    <StyledCard className="card-small ayy-feed flex">
+      <div className="content">
+        <h4 style={{ marginBottom: "12px" }}>AYY NEWS</h4>
+        <p className="ayy-small-title margin-r-medium">{latestTitle}</p>
+      </div>
+      <img
+        className="circle-img margin-r-small"
+        alt="news circle image"
+        src={circle_img}
+        style={{ width: "120px" }}
+      />
     </StyledCard>
   );
 }
