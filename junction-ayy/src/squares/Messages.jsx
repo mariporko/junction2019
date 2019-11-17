@@ -6,6 +6,8 @@ import { faExclamation, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { StyledCard } from "../StyledCard";
 import { MESSAGES } from "../building_information";
 
+import messages from "../assets/messages-circle.svg";
+
 export function Messages() {
   return (
     <StyledCard className="card-large social">
@@ -45,14 +47,26 @@ export function MessagesSummary() {
   const other = MESSAGES.length - important;
 
   return (
-    <StyledCard className="card-small social summary">
-      <h4 style={{ marginBottom: "12px" }}>Messages</h4>
-      <p>
-        <FontAwesomeIcon icon={faExclamation} /> {important} important messages
-      </p>
-      <p>
-        <FontAwesomeIcon icon={faEnvelope} /> {other} other messags
-      </p>
+    <StyledCard
+      className="card-small social summary flex"
+      style={{ justifyContent: "space-between" }}
+    >
+      <div className="content">
+        <h4 style={{ marginBottom: "12px" }}>Messages</h4>
+        <p>
+          <FontAwesomeIcon icon={faExclamation} /> {important} important
+          messages
+        </p>
+        <p>
+          <FontAwesomeIcon icon={faEnvelope} /> {other} other messags
+        </p>
+      </div>
+      <img
+        className="circle-img margin-r-small"
+        alt="messages circle image"
+        src={messages}
+        style={{ width: "120px", marginRight: "12px" }}
+      />
     </StyledCard>
   );
 }
