@@ -26,7 +26,7 @@ export function Messages() {
                 <FontAwesomeIcon
                   icon={whichIcon}
                   className="margin-r-medium"
-                  style={{ width: "12px" }}
+                  style={{ width: "12px", color: "var(--colorWhite_900)" }}
                 />
                 <span>{message.text}</span>
               </div>

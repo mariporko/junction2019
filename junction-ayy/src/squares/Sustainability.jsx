@@ -95,9 +95,9 @@ export function SustainabilitySummary() {
       style={{ justifyContent: "space-between" }}
     >
       <div className="content">
-        <h4 style={{ marginBottom: "12px" }}>In the last month...</h4>
-        <p>We have used {electricityData} kWh of electricity.</p>
-        <p>We have used {waterData} L of water.</p>
+        <h4 style={{ marginBottom: "12px" }}>In the last week...</h4>
+        <p>We have used {electricityData.current_week} kWh of electricity.</p>
+        <p>We have used {waterData.current_week} m^3 of water.</p>
       </div>
       <img
         className="circle-img margin-r-small"
