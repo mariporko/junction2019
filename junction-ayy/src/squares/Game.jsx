@@ -20,6 +20,14 @@ export function Game() {
     });
   }, []);
 
+  function onDown(e) {
+     setDirection(e.key.toUpperCase());
+  }
+
+  useEffect(() => {
+    window.addEventListener("keydown", onDown)
+  });
+
   useEffect(() => {
     if (direction === "U") {
         setGameOn(true);
@@ -53,7 +61,6 @@ export function Game() {
               }}
             />
             <p>Raise left hand to choose this</p>
-            <button onClick={() => setDirection("L")}>Left</button>
           </div>
           <div className="game-card flex" style={{ flexDirection: "column" }}>
             <img
@@ -67,7 +74,6 @@ export function Game() {
               }}
             />
             <p>Raise right hand to choose this</p>
-            <button onClick={() => setDirection("R")}>Right</button>
           </div>
         </div>
       </StyledCard>
@@ -90,10 +96,8 @@ export function Game() {
                   marginBottom: "24px"
                 }}
               />
+              <p>Raise both hands to play game!</p>
             </div>
-            <button onClick={() => setDirection("U")}>
-              Raise both hands to restart
-            </button>
           </div>
         </div>
       </StyledCard>
@@ -116,10 +120,8 @@ export function Game() {
                   marginBottom: "24px"
                 }}
               />
+              <p>Raise both hands to restart</p>
             </div>
-            <button onClick={() => setDirection("U")}>
-              Raise both hands to restart
-            </button>
           </div>
         </div>
       </StyledCard>
@@ -132,9 +134,6 @@ export function Game() {
             <h4 style={{ margin: "12px", textAlign: "center" }}>
               Choose a picture that resembles your current feeling!
             </h4>
-            <p style={{ margin: "12px", textAlign: "center" }}>
-              Getting direction: {direction}
-            </p>
           </div>
           <div className="game-main flex" style={{ flexDirection: "column" }}>
             <img
@@ -148,7 +147,6 @@ export function Game() {
               }}
             />
             <p>Raise both hands to play game!</p>
-            <button onClick={() => setDirection("U")}>Raise both hands</button>
           </div>
         </StyledCard>
       );
