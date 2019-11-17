@@ -14,11 +14,11 @@ export function Game() {
     let req = { url: "http://localhost:5000/dir", method: "GET" };
 
     request(req, function(error, response, body) {
-      if (!error && response.statusCode === 200) {
-        setDirection(body);
+      if (!error && (response.statusCode === 200)) {
+        setDirection(JSON.parse(body).direction);
       }
     });
-  }, []);
+  });
 
   function onDown(e) {
      setDirection(e.key.toUpperCase());

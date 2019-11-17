@@ -13,8 +13,8 @@ app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///timeseries.sqlite3'
 
 # db = SQLAlchemy(app)
-global direction
-direction = "Other"
+#global direction
+
 # class DataPoint(db.Model):
 #     idx = db.Column(db.Integer, primary_key=True)
 #     val = db.Column(db.Float)
@@ -63,8 +63,11 @@ def water():
 @app.route('/dir', methods=['POST'])
 @cross_origin()
 def dir_post():
+    global direction
+    direction = "Other"
+    print(request)
     dir = request.json['dir']
-
+    print(dir)
     if dir == "L":
         print("LEFT")
         direction = "L"
@@ -76,7 +79,7 @@ def dir_post():
         direction = "U"
     else:
         print("Something else came through")
-        direction = "Other"
+        direction = "Noner"
 
     return jsonify(direction=direction)
 
@@ -84,7 +87,8 @@ def dir_post():
 @app.route('/dir', methods=['GET'])
 @cross_origin()
 def dir_get():
-    return direction
+    print("Before get response: ", direction)
+    return jsonify(direction=direction)
 
 
 # @app.route('/get_data', methods=['GET'])
@@ -107,4 +111,4 @@ if __name__ == '__main__':
     # else:
     #     db.drop_all()
     # db.create_all()
-    app.run(debug=True)
+    app.run(debug=True, host= '0.0.0.0')
