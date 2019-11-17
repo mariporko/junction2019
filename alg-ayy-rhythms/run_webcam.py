@@ -5,7 +5,17 @@ File Created: Monday, 11th March 2019 12:47:30 am
 Author: Yuliang Xiu (yuliangxiu@sjtu.edu.cn)
 -----
 
+
+
+
+
+
 Modified in Junction 2019 hackathon by ayyHello! team
+
+
+
+
+
 
 -----
 Copyright 2018 - 2019 Shanghai Jiao Tong University, Machine Vision and Intelligence Group
@@ -28,13 +38,20 @@ from networks import *
 from network import CoordRegressionNetwork
 from dataloader import crop_camera
 
+import json
+
 datacache = []
 
 import requests
 def postDirection(direction):
-    API_url = "asdasdsadsadsadsad"
-    r = requests.post(API_url, data = {'dir': direction})
-    print(r.status_code, r.reason)
+    try:
+        API_url = "http://10.42.0.157:5000/dir"
+        myobj = {'dir': direction}
+        print(json.dumps(myobj))
+        r = requests.post(API_url, json = myobj)
+        print(r.status_code, r.reason)
+    except Exception as e:
+        print(e)
 
 
 def submitData(data):
@@ -49,7 +66,7 @@ def submitData(data):
         Ucount = 0
         for item in datacache: 
             if item == "L": 
-                Lcount+= 1
+                Lcount += 1
             if item == "U":
                 Ucount += 1
             if item == "R":
