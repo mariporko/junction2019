@@ -13,9 +13,6 @@ export function AyyInfo() {
           style={{ height: "72px" }}
         />
       </div>
-      {/* <div className="footer-middle">
-        <h2>AYYHELLO</h2>
-      </div> */}
       <div className="footer-right flex">
         <p
           className="margin-r-medium"

@@ -7,6 +7,7 @@ html {
     #55307f 0%,
     #231434 100%
   );
+  min-height: 100%;
 }
 
 .flex {
@@ -17,7 +18,7 @@ html {
 .header,
 .footer {
   justify-content: space-between;
-  padding: 48px;
+  padding: 160px 120px 80px 120px;
 }
 
 .content-area {
@@ -53,11 +54,11 @@ ul {
 }
 
 .card-small {
-  height: 120px;
+  height: 220px;
 }
 
 .card-large {
-  height: 360px;
+  height: 560px;
 }
 
 .game-main {
@@ -65,5 +66,16 @@ ul {
   height: 360px;
   background-color: var(--colorWhite_100);
   margin: 0 auto 48px auto;
+  border-radius: 1rem;
+}
+
+.justify {
+  justify-content: space-between;
+}
+
+.game-card {
+  width: 300px;
+  height: 300px;
+  background-color: var(--colorWhite_100);
   border-radius: 1rem;
 }

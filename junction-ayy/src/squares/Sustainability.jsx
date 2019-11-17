@@ -92,21 +92,27 @@ export function SustainabilitySummary() {
   }, []);
 
   return (
-    <StyledCard
-      className="card-small sustainability flex"
-      style={{ justifyContent: "space-between" }}
-    >
-      <div className="content">
-        <h4 style={{ marginBottom: "12px" }}>In the last week...</h4>
-        <p>We have used {electricityData.current_week} kWh of electricity.</p>
-        <p>We have used {waterData.current_week} m^3 of water.</p>
+    <StyledCard className="card-small sustainability">
+      <div
+        className="flex justify"
+        style={{ flexDirection: "column", textAlign: "center" }}
+      >
+        <h4 style={{ marginBottom: "12px" }}>
+          Energy consumption (last week):
+        </h4>
+        <div className="content">
+          <p style={{ marginBottom: "6px" }}>
+            Electricity consumption: {electricityData.current_week} kWh
+          </p>
+          <p>Water consumption: {waterData.current_week} m^3</p>
+        </div>
+        <img
+          className="circle-img margin-r-small"
+          alt="energy circle image"
+          src={energy}
+          style={{ width: "100px", marginTop: "24px" }}
+        />
       </div>
-      <img
-        className="circle-img margin-r-small"
-        alt="energy circle image"
-        src={energy}
-        style={{ width: "120px", marginRight: "12px" }}
-      />
     </StyledCard>
   );
 }

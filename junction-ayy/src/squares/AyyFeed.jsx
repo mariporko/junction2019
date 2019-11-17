@@ -39,6 +39,16 @@ export function AyyFeed() {
           </div>
         );
       })}
+      <img
+        className="circle-img margin-r-small"
+        alt="news circle image"
+        src={circle_img}
+        style={{
+          width: "100px",
+          margin: "24px auto 24px 300px",
+          alignSelf: "center"
+        }}
+      />
     </StyledCard>
   );
 }
@@ -47,17 +57,20 @@ export function AyyFeedSummary() {
   const latestTitle = AYY_DATA[0].title;
 
   return (
-    <StyledCard className="card-small ayy-feed flex">
-      <div className="content">
+    <StyledCard className="card-small ayy-feed ">
+      <div
+        className="content flex justify"
+        style={{ flexDirection: "column", textAlign: "center" }}
+      >
         <h4 style={{ marginBottom: "12px" }}>AYY NEWS</h4>
         <p className="ayy-small-title margin-r-medium">{latestTitle}</p>
+        <img
+          className="circle-img margin-r-small"
+          alt="news circle image"
+          src={circle_img}
+          style={{ width: "100px", marginTop: "12px" }}
+        />
       </div>
-      <img
-        className="circle-img margin-r-small"
-        alt="news circle image"
-        src={circle_img}
-        style={{ width: "120px" }}
-      />
     </StyledCard>
   );
 }

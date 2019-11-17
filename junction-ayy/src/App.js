@@ -37,7 +37,7 @@ function App() {
           <div className="block-large block-main"></div>
           <div className="flex-item">
             <Carousel
-              autoplayInterval={6000}
+              autoplayInterval={10000}
               autoplay
               wrapAround
               slidesToShow={2}

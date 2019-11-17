@@ -11,18 +11,17 @@ import messages from "../assets/messages-circle.svg";
 export function Messages() {
   return (
     <StyledCard className="card-large social">
-      <h3>Messages</h3>
+      <div className="justify flex">
+        <h3>Messages</h3>
+      </div>
       {MESSAGES.map((message, key) => {
         const classN = message.important ? "message important" : "message";
         const whichIcon = message.important ? faExclamation : faEnvelope;
 
         return (
           <div className={classN} key={key}>
-            <div
-              className="text flex"
-              style={{ justifyContent: "space-between", margin: "12px 24px" }}
-            >
-              <div className="message flex" style={{ width: "35em" }}>
+            <div className="text flex justify" style={{ margin: "12px 24px" }}>
+              <div className="message flex" style={{ width: "30em" }}>
                 <FontAwesomeIcon
                   icon={whichIcon}
                   className="margin-r-medium"
@@ -38,6 +37,12 @@ export function Messages() {
           </div>
         );
       })}
+      <img
+        className="circle-img margin-r-small"
+        alt="messages circle image"
+        src={messages}
+        style={{ width: "100px", margin: "140px auto 24px 300px" }}
+      />
     </StyledCard>
   );
 }
@@ -48,25 +53,30 @@ export function MessagesSummary() {
 
   return (
     <StyledCard
-      className="card-small social summary flex"
+      className="card-small social summary "
       style={{ justifyContent: "space-between" }}
     >
-      <div className="content">
+      <div
+        className="flex justify"
+        style={{ flexDirection: "column", textAlign: "center" }}
+      >
         <h4 style={{ marginBottom: "12px" }}>Messages</h4>
-        <p>
-          <FontAwesomeIcon icon={faExclamation} /> {important} important
-          messages
-        </p>
-        <p>
-          <FontAwesomeIcon icon={faEnvelope} /> {other} other messags
-        </p>
+        <div className="content">
+          <p style={{ marginBottom: "6px" }}>
+            <FontAwesomeIcon icon={faExclamation} /> {important} important
+            messages
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faEnvelope} /> {other} other messags
+          </p>
+        </div>
+        <img
+          className="circle-img margin-r-small"
+          alt="messages circle image"
+          src={messages}
+          style={{ width: "100px", marginTop: "24px" }}
+        />
       </div>
-      <img
-        className="circle-img margin-r-small"
-        alt="messages circle image"
-        src={messages}
-        style={{ width: "120px", marginRight: "12px" }}
-      />
     </StyledCard>
   );
 }

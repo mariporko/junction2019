@@ -18,11 +18,12 @@ export function Game() {
   }, []);
 
   return (
-    <StyledCard className="card game">
+    <StyledCard className="card-large game">
       <div className="game-header">
         <h3>GAME!</h3>
         <p style={{ margin: "12px" }}>Direction: {direction}</p>
       </div>
+      {/* 
       <div className="game-main flex" style={{ flexDirection: "column" }}>
         <img
           className="game-img"
@@ -35,6 +36,37 @@ export function Game() {
           }}
         />
         <p>Raise both hands to play game!</p>
+      </div> */}
+      <div
+        className="game-mode flex"
+        style={{ justifyContent: "space-evenly" }}
+      >
+        <div className="game-card flex" style={{ flexDirection: "column" }}>
+          <img
+            className="game-img"
+            alt="game instruction image"
+            src={raised_hands}
+            style={{
+              width: "100px",
+              paddingTop: "70px",
+              marginBottom: "24px"
+            }}
+          />
+          <p>Raise left hand to choose this</p>
+        </div>
+        <div className="game-card flex" style={{ flexDirection: "column" }}>
+          <img
+            className="game-img"
+            alt="game instruction image"
+            src={raised_hands}
+            style={{
+              width: "100px",
+              paddingTop: "70px",
+              marginBottom: "24px"
+            }}
+          />
+          <p>Raise right hand to choose this</p>
+        </div>
       </div>
     </StyledCard>
   );
