@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 # db = SQLAlchemy(app)
 global direction
-direction = None
+direction = "Other"
 # class DataPoint(db.Model):
 #     idx = db.Column(db.Integer, primary_key=True)
 #     val = db.Column(db.Float)
@@ -76,7 +76,7 @@ def dir_post():
         direction = "U"
     else:
         print("Something else came through")
-        direction = None
+        direction = "Other"
 
     return jsonify(direction=direction)
 
