@@ -59,3 +59,11 @@ ul {
 .card-large {
   height: 360px;
 }
+
+.game-main {
+  width: 360px;
+  height: 360px;
+  background-color: var(--colorWhite_100);
+  margin: 0 auto 48px auto;
+  border-radius: 1rem;
+}

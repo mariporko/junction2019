@@ -38,7 +38,7 @@ function App() {
           <div className="flex-item">
             <Carousel
               autoplayInterval={6000}
-              /*autoplay*/
+              autoplay
               wrapAround
               slidesToShow={2}
               renderBottomCenterControls={() => {}}

@@ -33,8 +33,10 @@ export function Sustainability() {
 
   return (
     <StyledCard className="card-large sustainability">
-      <h2>Energy consumption</h2>
-      <p>When compared to the weekly average values.</p>
+      <h3>Energy consumption</h3>
+      <p style={{ margin: "12px" }}>
+        When compared to the weekly average values.
+      </p>
       <VictoryChart height={200}>
         <VictoryGroup offset={25} colorScale={"qualitative"}>
           <VictoryAxis
