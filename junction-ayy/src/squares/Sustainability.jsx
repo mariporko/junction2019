@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { VictoryChart, VictoryGroup, VictoryBar, VictoryAxis } from "victory";
 
 import { StyledCard } from "../StyledCard";
 
@@ -46,31 +45,6 @@ export function Sustainability() {
           style={{ width: "620px", margin: "24px auto auto 24px" }}
         />
       </div>
-
-      {/* <VictoryChart height={200}>
-        <VictoryGroup offset={25} colorScale={"qualitative"}>
-          <VictoryAxis
-            tickValues={[1, 2]}
-            tickFormat={["Electricity (kWh)", "Water (m3)"]}
-          />
-          <VictoryBar
-            style={{ data: { fill: "var(--blue)" } }}
-            data={[
-              { x: 1, y: electricityData.current_week },
-              { x: 2, y: waterData.current_week }
-            ]}
-            //data={[{ x: 1, y: 5 }, { x: 2, y: 8 }]}
-          />
-          <VictoryBar
-            style={{ data: { fill: "var(--orange)" } }}
-            data={[
-              { x: 1, y: electricityData.average },
-              { x: 2, y: waterData.average }
-            ]}
-            //data={[{ x: 1, y: 2 }, { x: 2, y: 2 }]}
-          />
-        </VictoryGroup>
-      </VictoryChart> */}
     </StyledCard>
   );
 }

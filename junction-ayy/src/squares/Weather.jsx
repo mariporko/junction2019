@@ -23,7 +23,7 @@ export function Weather() {
 
     let req = {
       url:
-        "http://api.weatherstack.com/current?access_key=aa24982083f1c3d55aed3be87a73678f&query=Espoo",
+        "http://api.weatherstack.com/current?access_key=8155736516fe1972f0f348fc00d1cc4e&query=Espoo",
       method: "GET"
     };
 
