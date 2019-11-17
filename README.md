@@ -1,6 +1,8 @@
-# ayyHello
+![ayyHelo banner](https://github.com/mariporko/junction2019/blob/master/junction-ayy/src/assets/ayyhello-banner.png)
 
-ayyHello - Intelligent Infrastructure, AYY "Smart Signage - For Students by Students" challenge Junction 2019 project.
+
+
+**ayyHello** - Intelligent Infrastructure, AYY "*Smart Signage - For Students by Students*" -challenge Junction 2019 project
 
 **Punchline**: Strengthening local communities via on-the-spot valuable information and a bit of fun!
 
