@@ -4,6 +4,7 @@ import { VictoryChart, VictoryGroup, VictoryBar, VictoryAxis } from "victory";
 import { StyledCard } from "../StyledCard";
 
 import energy from "../assets/energy-circle.svg";
+import chart from "../assets/chart.svg";
 
 export function Sustainability() {
   const [electricityData, setElectricityData] = useState({
@@ -37,7 +38,16 @@ export function Sustainability() {
       <p style={{ margin: "12px" }}>
         When compared to the weekly average values.
       </p>
-      <VictoryChart height={200}>
+      <div className="flex justify">
+        <img
+          className="chart-img"
+          alt="chart image"
+          src={chart}
+          style={{ width: "700px", margin: "24px auto auto 140px" }}
+        />
+      </div>
+
+      {/* <VictoryChart height={200}>
         <VictoryGroup offset={25} colorScale={"qualitative"}>
           <VictoryAxis
             tickValues={[1, 2]}
@@ -60,7 +70,7 @@ export function Sustainability() {
             //data={[{ x: 1, y: 2 }, { x: 2, y: 2 }]}
           />
         </VictoryGroup>
-      </VictoryChart>
+      </VictoryChart> */}
     </StyledCard>
   );
 }
