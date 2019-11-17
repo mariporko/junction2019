@@ -33,7 +33,7 @@ export function AyyFeed() {
       <h3>AYY NEWS</h3>
       {AYY_DATA.map((article, key) => {
         return (
-          <div className="article" key={key}>
+          <div className="article" style={{ margin: "12px" }} key={key}>
             <h4>{article.title}</h4>
             <p className="text-small">{article.date}</p>
           </div>

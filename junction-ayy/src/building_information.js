@@ -22,8 +22,35 @@ export const RESIDENTS = [
     tenants: [
       { names: ["Assi Asukas", "Anssi Asuja"], number: 5 },
       { names: ["Timo Talonpoika"], number: 6 },
-      { names: ["Ulla Ullakko"], number: 7 },
-      { names: ["Lauri Lepakko"], number: 8 }
+      { names: ["Aki Yli-Yrjö"], number: 7 },
+      { names: ["William Sealy Gosset"], number: 8 }
+    ]
+  },
+  {
+    floor: 4,
+    tenants: [
+      { names: ["Brian Kottarainen"], number: 9 },
+      { names: ["Guy Fox"], number: 10 },
+      { names: ["Angel Flores"], number: 11 },
+      { names: ["Jess Twelvepacker"], number: 12 }
+    ]
+  },
+  {
+    floor: 5,
+    tenants: [
+      { names: ["Josh Ironer"], number: 13 },
+      { names: ["Goofy Lakewood"], number: 14 },
+      { names: ["Paavu Pullottaja"], number: 15 },
+      { names: ["Teemu Teekkari"], number: 16 }
+    ]
+  },
+  {
+    floor: 6,
+    tenants: [
+      { names: ["Brendan Eich"], number: 17 },
+      { names: ["E. Chalmers"], number: 18 },
+      { names: ["Ulla Ullakko"], number: 19 },
+      { names: ["Lauri Lepakko"], number: 20 }
     ]
   }
 ];
