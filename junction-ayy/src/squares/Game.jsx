@@ -39,7 +39,7 @@ export function Game() {
       </div> */}
       <div
         className="game-mode flex"
-        style={{ justifyContent: "space-evenly" }}
+        style={{ justifyContent: "space-evenly", marginTop: "60px" }}
       >
         <div className="game-card flex" style={{ flexDirection: "column" }}>
           <img
@@ -47,8 +47,8 @@ export function Game() {
             alt="game instruction image"
             src={raised_hands}
             style={{
-              width: "100px",
-              paddingTop: "70px",
+              height: "200px",
+              paddingTop: "24px",
               marginBottom: "24px"
             }}
           />
@@ -60,8 +60,8 @@ export function Game() {
             alt="game instruction image"
             src={raised_hands}
             style={{
-              width: "100px",
-              paddingTop: "70px",
+              height: "200px",
+              paddingTop: "24px",
               marginBottom: "24px"
             }}
           />
