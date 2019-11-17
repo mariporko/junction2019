@@ -18,91 +18,132 @@ export function Game() {
       }
     });
   }, []);
-  /* 
-  return (
-    <StyledCard className="card-large game">
-      <div className="game-header">
-        <h3 style={{ textAlign: "center" }}>GAME!</h3>
-        <h4 style={{ margin: "12px", textAlign: "center" }}>
-          Choose a picture that resembles your current feeling!
-        </h4>
-        <p style={{ margin: "12px", textAlign: "center" }}>
-          Direction: {direction}
-        </p>
-      </div>
-      {
-      <div className="game-main flex" style={{ flexDirection: "column" }}>
-        <img
-          className="game-img"
-          alt="game instruction image"
-          src={raised_hands}
-          style={{
-            width: "200px",
-            paddingTop: "70px",
-            marginBottom: "24px"
-          }}
-        />
-        <p>Raise both hands to play game!</p>
-      </div> 
-    </StyledCard>
-  );}*/
 
-  return (
-    <StyledCard className="card-large game">
-      <div className="game-header">
-        <h3 style={{ textAlign: "center" }}>GAME!</h3>
-        <h4 style={{ margin: "12px", textAlign: "center" }}>
-          Choose a picture that resembles your current feeling!
-        </h4>
-        <p style={{ margin: "12px", textAlign: "center" }}>
-          Direction: {direction}
-        </p>
-      </div>
-      {/* 
-      <div className="game-main flex" style={{ flexDirection: "column" }}>
-        <img
-          className="game-img"
-          alt="game instruction image"
-          src={raised_hands}
-          style={{
-            width: "200px",
-            paddingTop: "70px",
-            marginBottom: "24px"
-          }}
-        />
-        <p>Raise both hands to play game!</p>
-      </div> */}
-      <div
-        className="game-mode flex"
-        style={{ justifyContent: "space-evenly", marginTop: "60px" }}
-      >
-        <div className="game-card flex" style={{ flexDirection: "column" }}>
+  if (direction === "") {
+    return (
+      <StyledCard className="card-large game">
+        <div className="game-header">
+          <h3 style={{ textAlign: "center" }}>GAME!</h3>
+          <h4 style={{ margin: "12px", textAlign: "center" }}>
+            Choose a picture that resembles your current feeling!
+          </h4>
+          <p style={{ margin: "12px", textAlign: "center" }}>
+            Direction: {direction}
+          </p>
+        </div>
+        <div className="game-main flex" style={{ flexDirection: "column" }}>
           <img
             className="game-img"
             alt="game instruction image"
-            src={cat_1}
+            src={raised_hands}
             style={{
-              height: "200px",
-              paddingTop: "24px",
+              width: "200px",
+              paddingTop: "70px",
               marginBottom: "24px"
             }}
           />
-          <p>Raise left hand to choose this</p>
+          <p>Raise both hands to play game!</p>
+          <button onClick={() => setDirection("both hands")}>
+            Raise both hands
+          </button>
         </div>
-        <div className="game-card flex" style={{ flexDirection: "column" }}>
-          <img
-            className="game-img"
-            alt="game instruction image"
-            src={dog_1}
-            style={{
-              height: "200px",
-              paddingTop: "24px",
-              marginBottom: "24px"
-            }}
-          />
-          <p>Raise right hand to choose this</p>
+      </StyledCard>
+    );
+  } else if (direction === "both hands") {
+    return (
+      <StyledCard className="card-large game">
+        <div className="game-header">
+          <h3 style={{ textAlign: "center" }}>GAME!</h3>
+          <h4 style={{ margin: "12px", textAlign: "center" }}>
+            Choose a picture that resembles your current feeling!
+          </h4>
+          <p style={{ margin: "12px", textAlign: "center" }}>
+            Direction: {direction}
+          </p>
         </div>
-      </div>
-    </StyledCard>
-  );
+
+        <div
+          className="game-mode flex"
+          style={{ justifyContent: "space-evenly", marginTop: "60px" }}
+        >
+          <div className="game-card flex" style={{ flexDirection: "column" }}>
+            <img
+              className="game-img"
+              alt="game instruction image"
+              src={cat_1}
+              style={{
+                height: "200px",
+                paddingTop: "24px",
+                marginBottom: "24px"
+              }}
+            />
+            <p>Raise left hand to choose this</p>
+            <button onClick={() => setDirection("left")}>Left</button>
+          </div>
+          <div className="game-card flex" style={{ flexDirection: "column" }}>
+            <img
+              className="game-img"
+              alt="game instruction image"
+              src={dog_1}
+              style={{
+                height: "200px",
+                paddingTop: "24px",
+                marginBottom: "24px"
+              }}
+            />
+            <p>Raise right hand to choose this</p>
+            <button onClick={() => setDirection("right")}>Right</button>
+          </div>
+        </div>
+      </StyledCard>
+    );
+  } else if (direction === "left") {
+    return (
+      <StyledCard className="card-large game">
+        <div className="game-header">
+          <h3 style={{ textAlign: "center" }}>GAME!</h3>
+          <h4 style={{ margin: "12px", textAlign: "center" }}>
+            Choose a picture that resembles your current feeling!
+          </h4>
+          <p style={{ margin: "12px", textAlign: "center" }}>
+            Direction: {direction}
+          </p>
+        </div>
+
+        <div
+          className="game-mode flex"
+          style={{ justifyContent: "space-evenly", marginTop: "60px" }}
+        >
+          <div className="game-card flex" style={{ flexDirection: "column" }}>
+            <img
+              className="game-img"
+              alt="game instruction image"
+              src={cat_1}
+              style={{
+                height: "200px",
+                paddingTop: "24px",
+                marginBottom: "24px"
+              }}
+            />
+            <p>Raise left hand to choose this</p>
+            <button onClick={() => setDirection("left")}>Left</button>
+          </div>
+          <div className="game-card flex" style={{ flexDirection: "column" }}>
+            <img
+              className="game-img"
+              alt="game instruction image"
+              src={dog_1}
+              style={{
+                height: "200px",
+                paddingTop: "24px",
+                marginBottom: "24px"
+              }}
+            />
+            <p>Raise right hand to choose this</p>
+            <button onClick={() => setDirection("right")}>Right</button>
+          </div>
+        </div>
+      </StyledCard>
+    );
+  }
 }
