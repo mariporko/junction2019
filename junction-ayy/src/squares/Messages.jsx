@@ -16,7 +16,7 @@ export function Messages() {
 
         return (
           <div className={classN} key={key}>
-            <p
+            <div
               className="text flex"
               style={{ justifyContent: "space-between", margin: "12px 24px" }}
             >
@@ -32,7 +32,7 @@ export function Messages() {
                 {"- "}
                 {message.from}
               </p>
-            </p>
+            </div>
           </div>
         );
       })}
