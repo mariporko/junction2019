@@ -33,18 +33,19 @@ export function Sustainability() {
 
   return (
     <StyledCard className="card-large sustainability">
-      <h3>Energy consumption</h3>
-      <p style={{ margin: "12px" }}>
-        When compared to the weekly average values.
-      </p>
-      <div className="flex justify">
+      <div className="card-header">
+        <h3>Energy consumption</h3>
+      </div>
+      <div className="card-content" style={{ textAlign: "center" }}>
         <img
           className="chart-img"
           alt="chart image"
           src={chart}
-          style={{ width: "620px", margin: "24px auto auto 24px" }}
+          style={{ maxWidth: "100%", maxHeight: "490px", bottom: "0px" }}
         />
       </div>
+
+      <div className="card-footer"></div>
     </StyledCard>
   );
 }
@@ -77,24 +78,21 @@ export function SustainabilitySummary() {
 
   return (
     <StyledCard className="card-small sustainability">
-      <div
-        className="flex justify"
-        style={{ flexDirection: "column", textAlign: "center" }}
-      >
-        <h4 style={{ marginBottom: "12px" }}>
-          Energy consumption (last week):
-        </h4>
-        <div className="content">
-          <p style={{ marginBottom: "6px" }}>
-            Electricity consumption: {electricityData.current_week} kWh
-          </p>
-          <p>Water consumption: {waterData.current_week} m^3</p>
-        </div>
+      <div className="card-header">
+        <h4>Energy consumption (last week):</h4>
+      </div>
+      <div className="card-content">
+        <p>Electricity consumption: {electricityData.current_week} kWh</p>
+        <p>
+          Water consumption: {waterData.current_week} m<sup>3</sup>
+        </p>
+      </div>
+      <div className="card-footer">
         <img
           className="circle-img margin-r-small"
           alt="energy circle image"
           src={energy}
-          style={{ width: "100px", marginTop: "24px" }}
+          style={{ width: "100px" }}
         />
       </div>
     </StyledCard>

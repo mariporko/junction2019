@@ -55,10 +55,29 @@ ul {
 
 .card-small {
   height: 220px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .card-large {
   height: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-small .card-header {
+  margin-bottom: 12px;
+}
+.card-small p {
+  margin-bottom: 6px;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+.card-footer {
+  text-align: center;
 }
 
 .game-main {

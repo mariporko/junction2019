@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledCard } from "../StyledCard";
-import circle_img from "../assets/news-circle.svg";
+import news_circle from "../assets/news-circle.svg";
 
 const AYY_DATA = [
   {
@@ -30,25 +30,29 @@ const AYY_DATA = [
 export function AyyFeed() {
   return (
     <StyledCard className="card-large ayy-feed">
-      <h3>AYY NEWS</h3>
-      {AYY_DATA.map((article, key) => {
-        return (
-          <div className="article" style={{ margin: "12px" }} key={key}>
-            <h4>{article.title}</h4>
-            <p className="text-small">{article.date}</p>
-          </div>
-        );
-      })}
-      <img
-        className="circle-img margin-r-small"
-        alt="news circle image"
-        src={circle_img}
-        style={{
-          width: "100px",
-          margin: "24px auto 24px 300px",
-          alignSelf: "center"
-        }}
-      />
+      <div className="card-header">
+        <h3>AYY NEWS</h3>
+      </div>
+
+      <div className="card-content">
+        {AYY_DATA.map((article, key) => {
+          return (
+            <div className="article" style={{ margin: "12px" }} key={key}>
+              <h4>{article.title}</h4>
+              <p className="text-small">{article.date}</p>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="card-footer">
+        <img
+          className="circle-img margin-r-small"
+          alt="news circle image"
+          src={news_circle}
+          style={{ width: "200px" }}
+        />
+      </div>
     </StyledCard>
   );
 }
@@ -57,18 +61,19 @@ export function AyyFeedSummary() {
   const latestTitle = AYY_DATA[0].title;
 
   return (
-    <StyledCard className="card-small ayy-feed ">
-      <div
-        className="content flex justify"
-        style={{ flexDirection: "column", textAlign: "center" }}
-      >
-        <h4 style={{ marginBottom: "12px" }}>AYY NEWS</h4>
-        <p className="ayy-small-title margin-r-medium">{latestTitle}</p>
+    <StyledCard className="card-small ayy-feed">
+      <div className="card-header">
+        <h4>AYY NEWS</h4>
+      </div>
+      <div className="card-content">
+        <p className="ayy-small-title">{latestTitle}</p>
+      </div>
+      <div className="card-footer">
         <img
           className="circle-img margin-r-small"
           alt="news circle image"
-          src={circle_img}
-          style={{ width: "100px", marginTop: "12px" }}
+          src={news_circle}
+          style={{ width: "100px" }}
         />
       </div>
     </StyledCard>
