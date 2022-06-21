@@ -1,4 +1,4 @@
-numpy==1.14.5
+numpy==1.22.0
 alog==0.9.13
 torch==1.0.0
 scipy==1.1.0
